@@ -13,3 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return inertia('Index');
+});
+
+Route::get('/about', function () {
+    return inertia('About');
+});
