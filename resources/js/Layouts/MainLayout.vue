@@ -5,6 +5,8 @@
         <div class="flex gap-4">
             <div><Link href="/">Home</Link></div>
             <div><Link href="/about">About</Link></div>
+            <div>|</div>
+            <div><Link href="/login">Login</Link></div>
         </div>
     </div>
     <div class="px-36">
