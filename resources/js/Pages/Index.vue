@@ -1,5 +1,5 @@
 <template>
-    <div class="text-7xl font-bold py-6">Listings</div>
+    <div class="text-7xl font-bold py-6">Products</div>
     <div class="grid grid-cols-2 gap-4">
         <Box>
             <div class="flex justify-between">

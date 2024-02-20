@@ -7,6 +7,7 @@
             <div><Link href="/about">About</Link></div>
             <div>|</div>
             <div><Link href="/login">Login</Link></div>
+            <div><Link href="/register">Register</Link></div>
         </div>
     </div>
     <div class="px-36">
