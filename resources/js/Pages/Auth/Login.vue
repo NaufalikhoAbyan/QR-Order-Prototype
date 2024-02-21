@@ -12,10 +12,6 @@
                         <label>Password</label>
                         <input type="password" placeholder="Password" name="password" class="p-2 border-2 border-gray-300 rounded" v-model="form.password"/>
                     </div>
-                    <div class="flex items-center gap-3">
-                        <label>Remember Me</label>
-                        <input type="checkbox" name="remember" class="p-2 border-2 border-gray-300 rounded" v-model="form.remember"/>
-                    </div>
                     <button class="bg-blue-500 text-white p-2 rounded-md">Login</button>
                 </form>
             </div>

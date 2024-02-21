@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (Request $request) {
+//    dd($request->user()->id);
     return inertia('Index');
 });
 
@@ -23,5 +25,6 @@ Route::get('/about', function () {
     return inertia('About');
 });
 
-Route::resource('login', LoginController::class)->only(['index', 'store', 'destroy']);
-Route::resource('register', RegisterController::class)->only(['index', 'store', 'destroy']);
+Route::resource('login', LoginController::class)->only(['index', 'store']);
+Route::resource('register', RegisterController::class)->only(['index', 'store']);
+Route::get('/logout', [LoginController::class, 'destroy']);

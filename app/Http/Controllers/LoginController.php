@@ -16,11 +16,10 @@ class LoginController extends Controller
     {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
-            'password' => ['required'],
-            'remember' => ['boolean']
+            'password' => ['required']
         ]);
 
-        if (Auth::attempt($credentials, $credentials['remember'])) {
+        if (Auth::attempt($credentials, True)) {
             $request->session()->regenerate();
 
             return redirect()->intended();

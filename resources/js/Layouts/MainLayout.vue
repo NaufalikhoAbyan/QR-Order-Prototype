@@ -6,8 +6,14 @@
             <div><Link href="/">Home</Link></div>
             <div><Link href="/about">About</Link></div>
             <div>|</div>
-            <div><Link href="/login">Login</Link></div>
-            <div><Link href="/register">Register</Link></div>
+            <div class="flex gap-4" v-if="user">
+                <div>{{user.name}}</div>
+                <Link href="/logout">Logout</Link>
+            </div>
+            <div class="flex gap-4" v-else>
+                <Link href="/login">Login</Link>
+                <Link href="/register">Register</Link>
+            </div>
         </div>
     </div>
     <div class="px-36">
@@ -15,5 +21,12 @@
     </div>
 </template>
 <script setup>
-import { Link } from "@inertiajs/vue3";
+import { Link, usePage } from "@inertiajs/vue3";
+import { computed } from "vue";
+
+const page = usePage();
+
+const user = computed(
+    () => page.props.user,
+);
 </script>
